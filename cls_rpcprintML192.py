@@ -173,6 +173,7 @@ class printThread(threading.Thread):
                             return 1
                         if self.openDoor1() == False and self.interOption == 0 and self.pauseOption == 0:
                             if self.DagerOption == 1:
+                                self.parent.Insertlog('dangeroption enter')
                                 self.proxy.Danger(False)
                                 self.pause = False
                                 self.DagerOption = 0
