@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//lines/cls_control.py=utf-8
+encoding//lines/cls_controlpcb.py=utf-8
+encoding//lines/cls_controlpcb2.py=utf-8
+encoding//lines/cls_controlpcb3.py=utf-8
+encoding//printer/cls_CMv22.py=utf-8
+encoding//printer/cls_IM131.py=utf-8
+encoding//printer/cls_ML192v22.py=utf-8
+encoding//printer/cls_display.py=utf-8
+encoding//printer/cls_displayIMJ.py=utf-8
+encoding//printer/cls_extdisplay.py=utf-8
+encoding//printer/cls_extdisplayIMJ.py=utf-8
+encoding/cls_rpcprintCM.py=utf-8
+encoding/cls_rpcprintIM131.py=utf-8
+encoding/cls_rpcprintML192.py=utf-8
+encoding/xmlrpcserver.py=utf-8

@@ -1,0 +1,645 @@
+__init__ 2017-05-15 14:33:11,908 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 14:42:55,049 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 14:43:07,810 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 14:47:16,484 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 14:51:03,629 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 14:51:46,923 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 14:53:52,521 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 14:55:38,917 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 15:00:31,705 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 15:12:13,772 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 15:15:09,048 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 15:16:14,797 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 15:19:23,145 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 15:35:13,812 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 15:39:32,632 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 15:42:09,558 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 15:44:40,192 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 19:05:15,220 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-15 19:07:17,771 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-17 14:49:24,952 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-17 15:32:17,994 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-17 15:32:48,730 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-17 16:34:46,047 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-17 16:35:16,028 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-17 16:35:29,351 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-19 09:48:37,154 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-19 09:49:09,393 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-19 09:54:21,984 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-23 13:53:34,086 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-23 14:11:29,232 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-23 14:36:10,202 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-23 14:42:47,877 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 09:41:50,512 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 09:49:47,464 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 09:52:22,393 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 09:52:23,481 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 09:57:44,658 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 10:24:46,033 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 10:33:27,175 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 10:33:39,812 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 10:34:19,460 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 10:38:34,358 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 10:39:11,583 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 10:39:21,218 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 10:39:55,627 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 10:42:11,210 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 10:46:18,400 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 10:50:38,281 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 10:50:56,897 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 10:51:39,450 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 10:55:42,253 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 10:58:03,920 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 11:03:22,736 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 11:49:39,570 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 19:20:09,282 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-25 19:20:20,969 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-26 13:04:40,342 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-26 16:54:48,771 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 09:29:06,111 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 09:55:12,832 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 09:56:35,106 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 10:01:10,566 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 10:03:03,000 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 10:06:53,975 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 10:10:01,272 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 10:17:02,863 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 10:38:43,775 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 10:39:27,301 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 11:12:02,163 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 11:29:04,003 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 11:41:16,683 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 13:20:44,345 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 13:21:31,940 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 16:17:18,533 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-30 17:26:07,927 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-31 14:35:02,454 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-31 14:42:42,897 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-31 15:22:04,972 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-31 15:22:59,192 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+do_POST 2017-05-31 15:23:13,076 INFO Client IP: 192.168.0.22 - Port: 46452
+do_POST 2017-05-31 15:23:13,077 INFO Client request: 
+<methodCall><methodName>system.listMethods</methodName><params/></methodCall>
+
+do_POST 2017-05-31 15:23:13,077 INFO Server response: 
+<?xml version='1.0'?>
+<methodResponse>
+<params>
+<param>
+<value><array><data>
+<value><string>BasicImageOff</string></value>
+<value><string>BasicImageOn</string></value>
+<value><string>Initlog</string></value>
+<value><string>Insertlog</string></value>
+<value><string>adminSet</string></value>
+<value><string>boardDown</string></value>
+<value><string>boardHome</string></value>
+<value><string>boardStop</string></value>
+<value><string>boardUp</string></value>
+<value><string>bufferTest</string></value>
+<value><string>checkxmlrpcclient</string></value>
+<value><string>clearGrid</string></value>
+<value><string>engineLightOff</string></value>
+<value><string>engineLightOn</string></value>
+<value><string>enginePower</string></value>
+<value><string>getCurrentLayer</string></value>
+<value><string>isEngineOn</string></value>
+<value><string>isLightOn</string></value>
+<value><string>isOpenPorts</string></value>
+<value><string>isPause</string></value>
+<value><string>isPrinting</string></value>
+<value><string>ledOn_fanOff</string></value>
+<value><string>led_fanOn</string></value>
+<value><string>ledblink_fanOn</string></value>
+<value><string>maskImageOn</string></value>
+<value><string>openPorts</string></value>
+<value><string>printPause</string></value>
+<value><string>printResume</string></value>
+<value><string>printStart</string></value>
+<value><string>printStop</string></value>
+<value><string>rpcprinter</string></value>
+<value><string>setupGrid</string></value>
+<value><string>showGrid</string></value>
+<value><string>shutdown</string></value>
+<value><string>sliceDownload</string></value>
+<value><string>sliceUpload</string></value>
+<value><string>system.listMethods</string></value>
+<value><string>system.methodHelp</string></value>
+<value><string>system.methodSignature</string></value>
+<value><string>uploadFile</string></value>
+<value><string>whiteImageOff</string></value>
+<value><string>whiteImageOn</string></value>
+<value><string>zeropointDown</string></value>
+<value><string>zeropointUp</string></value>
+</data></array></value>
+</param>
+</params>
+</methodResponse>
+
+
+do_POST 2017-05-31 15:23:18,692 INFO Client IP: 192.168.0.22 - Port: 46454
+do_POST 2017-05-31 15:23:18,692 INFO Client request: 
+<methodCall><methodName>printPause</methodName><params/></methodCall>
+
+do_POST 2017-05-31 15:23:18,692 INFO Server response: 
+<?xml version='1.0'?>
+<methodResponse>
+<fault>
+<value><struct>
+<member>
+<name>faultCode</name>
+<value><int>1</int></value>
+</member>
+<member>
+<name>faultString</name>
+<value><string>&lt;type 'exceptions.AttributeError'&gt;:'builtin_function_or_method' object has no attribute 'time'</string></value>
+</member>
+</struct></value>
+</fault>
+</methodResponse>
+
+
+__init__ 2017-05-31 15:25:47,551 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+do_POST 2017-05-31 15:25:50,977 INFO Client IP: 192.168.0.22 - Port: 46530
+do_POST 2017-05-31 15:25:50,978 INFO Client request: 
+<methodCall><methodName>system.listMethods</methodName><params/></methodCall>
+
+do_POST 2017-05-31 15:25:50,979 INFO Server response: 
+<?xml version='1.0'?>
+<methodResponse>
+<params>
+<param>
+<value><array><data>
+<value><string>BasicImageOff</string></value>
+<value><string>BasicImageOn</string></value>
+<value><string>Initlog</string></value>
+<value><string>Insertlog</string></value>
+<value><string>adminSet</string></value>
+<value><string>boardDown</string></value>
+<value><string>boardHome</string></value>
+<value><string>boardStop</string></value>
+<value><string>boardUp</string></value>
+<value><string>bufferTest</string></value>
+<value><string>checkxmlrpcclient</string></value>
+<value><string>clearGrid</string></value>
+<value><string>engineLightOff</string></value>
+<value><string>engineLightOn</string></value>
+<value><string>enginePower</string></value>
+<value><string>getCurrentLayer</string></value>
+<value><string>isEngineOn</string></value>
+<value><string>isLightOn</string></value>
+<value><string>isOpenPorts</string></value>
+<value><string>isPause</string></value>
+<value><string>isPrinting</string></value>
+<value><string>ledOn_fanOff</string></value>
+<value><string>led_fanOn</string></value>
+<value><string>ledblink_fanOn</string></value>
+<value><string>maskImageOn</string></value>
+<value><string>openPorts</string></value>
+<value><string>printPause</string></value>
+<value><string>printResume</string></value>
+<value><string>printStart</string></value>
+<value><string>printStop</string></value>
+<value><string>rpcprinter</string></value>
+<value><string>setupGrid</string></value>
+<value><string>showGrid</string></value>
+<value><string>shutdown</string></value>
+<value><string>sliceDownload</string></value>
+<value><string>sliceUpload</string></value>
+<value><string>system.listMethods</string></value>
+<value><string>system.methodHelp</string></value>
+<value><string>system.methodSignature</string></value>
+<value><string>uploadFile</string></value>
+<value><string>whiteImageOff</string></value>
+<value><string>whiteImageOn</string></value>
+<value><string>zeropointDown</string></value>
+<value><string>zeropointUp</string></value>
+</data></array></value>
+</param>
+</params>
+</methodResponse>
+
+
+do_POST 2017-05-31 15:25:55,855 INFO Client IP: 192.168.0.22 - Port: 46532
+do_POST 2017-05-31 15:25:55,855 INFO Client request: 
+<methodCall><methodName>printPause</methodName><params/></methodCall>
+
+do_POST 2017-05-31 15:25:55,856 INFO Server response: 
+<?xml version='1.0'?>
+<methodResponse>
+<params>
+<param>
+<value><int>1</int></value>
+</param>
+</params>
+</methodResponse>
+
+
+do_POST 2017-05-31 15:26:01,166 INFO Client IP: 192.168.0.22 - Port: 46534
+do_POST 2017-05-31 15:26:01,167 INFO Client request: 
+<methodCall><methodName>printResume</methodName><params/></methodCall>
+
+do_POST 2017-05-31 15:26:01,167 INFO Server response: 
+<?xml version='1.0'?>
+<methodResponse>
+<fault>
+<value><struct>
+<member>
+<name>faultCode</name>
+<value><int>1</int></value>
+</member>
+<member>
+<name>faultString</name>
+<value><string>&lt;type 'exceptions.AttributeError'&gt;:'cls_RpcPrintIMJ' object has no attribute 'ResumeTime'</string></value>
+</member>
+</struct></value>
+</fault>
+</methodResponse>
+
+
+__init__ 2017-05-31 15:26:17,641 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+do_POST 2017-05-31 15:26:19,268 INFO Client IP: 192.168.0.22 - Port: 46536
+do_POST 2017-05-31 15:26:19,269 INFO Client request: 
+<methodCall><methodName>system.listMethods</methodName><params/></methodCall>
+
+do_POST 2017-05-31 15:26:19,269 INFO Server response: 
+<?xml version='1.0'?>
+<methodResponse>
+<params>
+<param>
+<value><array><data>
+<value><string>BasicImageOff</string></value>
+<value><string>BasicImageOn</string></value>
+<value><string>Initlog</string></value>
+<value><string>Insertlog</string></value>
+<value><string>adminSet</string></value>
+<value><string>boardDown</string></value>
+<value><string>boardHome</string></value>
+<value><string>boardStop</string></value>
+<value><string>boardUp</string></value>
+<value><string>bufferTest</string></value>
+<value><string>checkxmlrpcclient</string></value>
+<value><string>clearGrid</string></value>
+<value><string>engineLightOff</string></value>
+<value><string>engineLightOn</string></value>
+<value><string>enginePower</string></value>
+<value><string>getCurrentLayer</string></value>
+<value><string>isEngineOn</string></value>
+<value><string>isLightOn</string></value>
+<value><string>isOpenPorts</string></value>
+<value><string>isPause</string></value>
+<value><string>isPrinting</string></value>
+<value><string>ledOn_fanOff</string></value>
+<value><string>led_fanOn</string></value>
+<value><string>ledblink_fanOn</string></value>
+<value><string>maskImageOn</string></value>
+<value><string>openPorts</string></value>
+<value><string>printPause</string></value>
+<value><string>printResume</string></value>
+<value><string>printStart</string></value>
+<value><string>printStop</string></value>
+<value><string>rpcprinter</string></value>
+<value><string>setupGrid</string></value>
+<value><string>showGrid</string></value>
+<value><string>shutdown</string></value>
+<value><string>sliceDownload</string></value>
+<value><string>sliceUpload</string></value>
+<value><string>system.listMethods</string></value>
+<value><string>system.methodHelp</string></value>
+<value><string>system.methodSignature</string></value>
+<value><string>uploadFile</string></value>
+<value><string>whiteImageOff</string></value>
+<value><string>whiteImageOn</string></value>
+<value><string>zeropointDown</string></value>
+<value><string>zeropointUp</string></value>
+</data></array></value>
+</param>
+</params>
+</methodResponse>
+
+
+do_POST 2017-05-31 15:26:23,593 INFO Client IP: 192.168.0.22 - Port: 46538
+do_POST 2017-05-31 15:26:23,593 INFO Client request: 
+<methodCall><methodName>printPause</methodName><params/></methodCall>
+
+do_POST 2017-05-31 15:26:23,594 INFO Server response: 
+<?xml version='1.0'?>
+<methodResponse>
+<params>
+<param>
+<value><int>1</int></value>
+</param>
+</params>
+</methodResponse>
+
+
+do_POST 2017-05-31 15:26:27,811 INFO Client IP: 192.168.0.22 - Port: 46540
+do_POST 2017-05-31 15:26:27,811 INFO Client request: 
+<methodCall><methodName>printResume</methodName><params/></methodCall>
+
+do_POST 2017-05-31 15:26:27,811 INFO Server response: 
+<?xml version='1.0'?>
+<methodResponse>
+<params>
+<param>
+<value><double>4.217765808105469</double></value>
+</param>
+</params>
+</methodResponse>
+
+
+__init__ 2017-05-31 15:55:38,499 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+do_POST 2017-05-31 15:55:43,534 INFO Client IP: 192.168.0.22 - Port: 46614
+do_POST 2017-05-31 15:55:43,534 INFO Client request: 
+<methodCall><methodName>printPause</methodName><params/></methodCall>
+
+do_POST 2017-05-31 15:55:43,535 INFO Server response: 
+<?xml version='1.0'?>
+<methodResponse>
+<params>
+<param>
+<value><int>1</int></value>
+</param>
+</params>
+</methodResponse>
+
+
+do_POST 2017-05-31 15:55:56,617 INFO Client IP: 192.168.0.22 - Port: 46618
+do_POST 2017-05-31 15:55:56,617 INFO Client request: 
+<methodCall><methodName>printResume</methodName><params/></methodCall>
+
+do_POST 2017-05-31 15:55:56,618 INFO Server response: 
+<?xml version='1.0'?>
+<methodResponse>
+<params>
+<param>
+<value><int>13</int></value>
+</param>
+</params>
+</methodResponse>
+
+
+__init__ 2017-05-31 16:17:26,249 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+do_POST 2017-05-31 16:17:31,603 INFO Client IP: 192.168.0.22 - Port: 46706
+do_POST 2017-05-31 16:17:31,603 INFO Client request: 
+<methodCall><methodName>system.listMethods</methodName><params/></methodCall>
+
+do_POST 2017-05-31 16:17:31,604 INFO Server response: 
+<?xml version='1.0'?>
+<methodResponse>
+<params>
+<param>
+<value><array><data>
+<value><string>BasicImageOff</string></value>
+<value><string>BasicImageOn</string></value>
+<value><string>Initlog</string></value>
+<value><string>Insertlog</string></value>
+<value><string>adminSet</string></value>
+<value><string>boardDown</string></value>
+<value><string>boardHome</string></value>
+<value><string>boardStop</string></value>
+<value><string>boardUp</string></value>
+<value><string>bufferTest</string></value>
+<value><string>checkxmlrpcclient</string></value>
+<value><string>clearGrid</string></value>
+<value><string>engineLightOff</string></value>
+<value><string>engineLightOn</string></value>
+<value><string>enginePower</string></value>
+<value><string>getCurrentLayer</string></value>
+<value><string>isEngineOn</string></value>
+<value><string>isLightOn</string></value>
+<value><string>isOpenPorts</string></value>
+<value><string>isPause</string></value>
+<value><string>isPrinting</string></value>
+<value><string>ledOn_fanOff</string></value>
+<value><string>led_fanOn</string></value>
+<value><string>ledblink_fanOn</string></value>
+<value><string>maskImageOn</string></value>
+<value><string>openPorts</string></value>
+<value><string>printPause</string></value>
+<value><string>printResume</string></value>
+<value><string>printStart</string></value>
+<value><string>printStop</string></value>
+<value><string>rpcprinter</string></value>
+<value><string>setupGrid</string></value>
+<value><string>showGrid</string></value>
+<value><string>shutdown</string></value>
+<value><string>sliceDownload</string></value>
+<value><string>sliceUpload</string></value>
+<value><string>system.listMethods</string></value>
+<value><string>system.methodHelp</string></value>
+<value><string>system.methodSignature</string></value>
+<value><string>uploadFile</string></value>
+<value><string>whiteImageOff</string></value>
+<value><string>whiteImageOn</string></value>
+<value><string>zeropointDown</string></value>
+<value><string>zeropointUp</string></value>
+</data></array></value>
+</param>
+</params>
+</methodResponse>
+
+
+__init__ 2017-05-31 16:23:50,984 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-31 16:24:16,077 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-31 16:25:12,715 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-31 17:21:35,524 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-05-31 17:27:38,856 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-01 17:33:12,932 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-01 19:22:01,315 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-02 16:18:48,119 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-02 17:56:27,748 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-02 18:01:09,932 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-02 19:44:32,565 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-02 20:01:05,324 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-05 09:50:18,495 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-05 09:50:38,518 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-05 10:06:25,836 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-05 10:07:09,491 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-05 10:08:44,304 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-05 11:50:44,592 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-05 11:57:34,201 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-05 13:12:39,157 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-05 13:12:52,859 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-05 15:18:23,031 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-07 16:57:14,679 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-09 14:31:53,715 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-09 14:37:10,511 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-09 14:38:30,333 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+do_POST 2017-06-09 14:38:47,357 INFO Client IP: 192.168.0.22 - Port: 47688
+do_POST 2017-06-09 14:38:47,358 INFO Client request: 
+<methodCall><methodName>maskImageOn</methodName><params/></methodCall>
+
+do_POST 2017-06-09 14:38:47,361 INFO Server response: 
+<?xml version='1.0'?>
+<methodResponse>
+<fault>
+<value><struct>
+<member>
+<name>faultCode</name>
+<value><int>1</int></value>
+</member>
+<member>
+<name>faultString</name>
+<value><string>&lt;class 'socket.error'&gt;:[Errno 111] Connection refused</string></value>
+</member>
+</struct></value>
+</fault>
+</methodResponse>
+
+
+__init__ 2017-06-09 17:37:15,720 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-09 17:40:34,462 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-09 17:40:42,262 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-09 17:50:36,899 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-09 17:50:50,170 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-09 17:53:46,037 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-06-09 17:57:05,413 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-07-03 11:24:42,129 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-07-03 18:28:24,487 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-07-10 20:43:29,232 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-07-10 20:43:57,788 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-07-10 20:51:13,466 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-07-10 20:55:24,578 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-07-10 20:59:11,263 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-07-28 15:49:47,791 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-08-01 11:22:24,902 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-08-01 11:46:15,293 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-08-01 12:52:57,737 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-08-01 12:55:11,261 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-08-01 12:59:57,792 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-08-01 13:05:51,434 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-08-01 14:23:15,174 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
+__init__ 2017-08-01 14:25:32,817 ERROR Could not connect serial port 0: could not open port 0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+
