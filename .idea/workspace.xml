@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dd55b3c-d8d1-47ed-a737-41f607f4b20e" name="Changes" comment="">
+    <list default="true" id="9dd55b3c-d8d1-47ed-a737-41f607f4b20e" name="Changes" comment="2021년 12월 14일 (2021.12.14 / 2.0.1.25)&#10;&#10;* 날짜만 오늘자로 추가&#10;* 코드 분석 중&#10;&#10;[qt]&#10;- 관리자 모드, information 날짜 추가&#10;&#10;[python]&#10;- 출력시퀀스 로그 코드 추가 (동작 확인 중)&#10;- 로그 추가한 후 git 등록함 (로그 추가, 날짜 수정만)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cls_rpcprintML192.py" beforeDir="false" afterPath="$PROJECT_DIR$/cls_rpcprintML192.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printer/cls_ML192v22.py" beforeDir="false" afterPath="$PROJECT_DIR$/printer/cls_ML192v22.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xmlrpcserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/xmlrpcserver.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +30,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../IMC_KIST/dp110server_IMC_KITECH" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dp110server(무토자석센서무시)" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -39,6 +41,14 @@
       <option name="presentableId" value="Default" />
       <updated>1635899678512</updated>
     </task>
+    <task id="LOCAL-00001" summary="2021년 12월 14일 (2021.12.14 / 2.0.1.25)&#10;&#10;* 날짜만 오늘자로 추가&#10;* 코드 분석 중&#10;&#10;[qt]&#10;- 관리자 모드, information 날짜 추가&#10;&#10;[python]&#10;- 출력시퀀스 로그 코드 추가 (동작 확인 중)&#10;- 로그 추가한 후 git 등록함 (로그 추가, 날짜 수정만)">
+      <created>1639474688212</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639474688212</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -51,5 +61,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2021년 12월 14일 (2021.12.14 / 2.0.1.25)&#10;&#10;* 날짜만 오늘자로 추가&#10;* 코드 분석 중&#10;&#10;[qt]&#10;- 관리자 모드, information 날짜 추가&#10;&#10;[python]&#10;- 출력시퀀스 로그 코드 추가 (동작 확인 중)&#10;- 로그 추가한 후 git 등록함 (로그 추가, 날짜 수정만)" />
+    <option name="LAST_COMMIT_MESSAGE" value="2021년 12월 14일 (2021.12.14 / 2.0.1.25)&#10;&#10;* 날짜만 오늘자로 추가&#10;* 코드 분석 중&#10;&#10;[qt]&#10;- 관리자 모드, information 날짜 추가&#10;&#10;[python]&#10;- 출력시퀀스 로그 코드 추가 (동작 확인 중)&#10;- 로그 추가한 후 git 등록함 (로그 추가, 날짜 수정만)" />
   </component>
 </project>

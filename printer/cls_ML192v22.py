@@ -34,8 +34,8 @@ class cls_ML192v22(object):
         self.ZMotorEndUpDistance = int(config.get('MOTOR_SETUP', 'ZMotorEndUpDistance'))
         self.ZMotorAmount = float(config.get('MOTOR_SETUP', 'ZMotorAmount'))
         self.ZeroPoint = float(config.get('MOTOR_SETUP', 'ZeroPoint'))
-        self.WaitTime_Basic = float(config.get('PARAMETER', 'BasicWaitTime'))
-        self.WaitTime_Beginning = float(config.get('PARAMETER', 'InitWaitTime'))
+        # self.WaitTime_Basic = float(config.get('PARAMETER', 'BasicWaitTime'))
+        # self.WaitTime_Beginning = float(config.get('PARAMETER', 'InitWaitTime'))
 
     def writeConfig(self, configPath):
         print configPath
