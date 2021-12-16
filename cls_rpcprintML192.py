@@ -1,3 +1,6 @@
+#!/usr/local/bin/python
+# -*- coding: utf-8 -*-
+
 # uncompyle6 version 3.5.0
 # Python bytecode 2.7 (62211)
 # Decompiled from: Python 2.7.5 (default, Nov 16 2020, 22:23:17)
@@ -63,7 +66,7 @@ class printThread(threading.Thread):
         self.proxy = xmlrpclib.ServerProxy('http://127.0.0.1:8080')
         self.LightStep_Beginning = int(self.printer.LightStep_Beginning)
         self.proxy.Layers(self.nowLayer)
-        self.DagerOption = 0
+        self.DangerOption = 0
         self.doorOpen = False
         self.checkHome = False
         self.interOption = 0
@@ -83,6 +86,7 @@ class printThread(threading.Thread):
         self.printer.printConnect1()
         print'opendoor1 enter333'
         returnData = self.printer.checkSensor()
+        print returnData
         number = 0
         for hex1 in returnData:
             print'opendoor1 enter2'
@@ -93,19 +97,34 @@ class printThread(threading.Thread):
                     print 'opendoor1 enter3'
                     self.printer.printConnect2()
                     self.DoorSignal = True
+                    print returnData
                     return True
                 if returnData[(Fnumber + 1)] == '1':
                     print'opendoor1 enter4'
+                    print returnData
                     pass
                 elif returnData[(Fnumber - 1)] == 'd':
                     print 'opendoor1 enter5'
                     self.printer.printConnect2()
                     self.DoorSignal = False
+                    print returnData
                     return False
         return 'Fail'
 
     def xmlrpcclient(self):
         self.proxy = xmlrpclib.ServerProxy('http://127.0.0.1:8080')
+
+    def run_stop(self):
+        self.proxy.Printing()
+        self.pthread.stop = True
+        self.printer.printConnect2()
+        self.printer.boardStop()
+        self.printer.boardUp(self.printer.ZMotorEndUpDistance)
+        self.printer.display.showSliceOffImage()
+        self.printer.led_fanOn()
+        self.Insertlog('printing stop')
+        self.printer.removeImageFile()
+        return 1
 
     def run(self):
         self.parent.Insertlog('run enter')
@@ -116,15 +135,14 @@ class printThread(threading.Thread):
             self.parent.Insertlog('run while enter')
             print'run while enter'
             self.printer.printConnect1()
-            print 'run while enter2'
 
             if self.openDoor1() == True:
-                print'opendoor11 true'
-                self.parent.Insertlog('opendoor1 true')
                 print'opendoor1 true'
+                self.parent.Insertlog('opendoor1 true')
                 self.proxy.Danger(True)
-                self.DagerOption = 1
+                self.DangerOption = 1
                 if self.stop == True:
+                    self.run_stop()
                     return 1
                 self.printer.boardStop()
                 sleep(0.1)
@@ -132,56 +150,63 @@ class printThread(threading.Thread):
                 self.parent.Insertlog('opendoor1 false')
                 print'opendoor1 false'
                 self.printer.printConnect2()
-                if self.stop == True:
-                    print'opendoor1 false - strop true'
-                    return 1
-                if self.printer.boardHome() == '4f1300000000000000df500a' or '4f1300000000000000ff500a':
-                    print 'opendoor1 false = boradhome'
+                if self.printer.boardHome() != '4f0b0000000000000000500a':
+                    print 'opendoor1 false = boradhome false - go boardhome'
                     self.printer.boardHome()
                 if self.stop == True:
+                    self.run_stop()
                     return 1
 
             if self.printer.boardHome() == '4f0b0000000000000000500a':
+                print 'opendoor1 false = boradhome true'
                 if self.stop == True:
+                    self.run_stop()
                     return 1
                 break
             self.printer.checkSensor()
-            if self.DagerOption == 1 and self.openDoor1() == False:
-                self.parent.Insertlog('enter3')
-                print'enter3'
+
+            if self.DangerOption == 1 and self.openDoor1() == False:
+                self.parent.Insertlog('opendoor2 false')
+                print'opendoor2 false'
                 self.proxy.Danger(False)
                 self.proxy.Danger(False)
-                self.DagerOption = 0
-        print'enter 100'
+                self.DangerOption = 0
 
         if self.stop == True:
+            self.run_stop()
             return 1
-        self.DagerOption = 0
-        self.printer.boardUp(self.printer.ZeroPoint)
+        self.DangerOption = 0
+
         print 'board up zeropoint'
+        self.printer.boardUp(self.printer.ZeroPoint)
 
         if self.stop == True:
-            self.printer.boardUp(self.printer.ZMotorEndUpDistance)
+            self.run_stop()
             return 1
+
         if self.beginningTime > self.basicTime and self.LightStep_Beginning != 0:
             Minus_beginningTime = int((self.beginningTime - self.basicTime) / self.LightStep_Beginning)
         else:
             Minus_beginningTime = 0
-        while self.nowLayer < self.totalLayer:
-            self.parent.Insertlog('enter4')
-            print'enter4'
+
+        while self.nowLayer <= self.totalLayer: # 조형 반복 시퀀스
+            self.parent.Insertlog('print repetition enter')
+            print'print repetition enter'
             try:
-                self.parent.Insertlog('enter5')
-                print'enter5'
+                self.parent.Insertlog('pixel data read')
+                print 'pixel data read'
                 pixeldata = int(self.Config.get('PixelData', 'SEC_%04d.png' % self.nowLayer))
             except:
                 pixeldata = 1
             else:
-                self.parent.Insertlog('enter6')
-                print'enter6'
+                self.parent.Insertlog('pixel data read else')
+                print 'pixel data read else'
+
                 if self.pause == True:
                     if self.stop == True:
+                        self.run_stop()
                         return 1
+
                     if self.interimPause == True and self.reTryPause == 0:
                         self.reTryPause = 1
                         self.DoorSignal = True
@@ -195,14 +220,15 @@ class printThread(threading.Thread):
                     else:
                         self.interimPause = False
                         if self.stop == True:
+                            self.run_stop()
                             return 1
                         if self.openDoor1() == False and self.interOption == 0 and self.pauseOption == 0:
-                            if self.DagerOption == 1:
-                                self.parent.Insertlog('dangeroption enter')
-                                print'dangeroption enter'
+                            if self.DangerOption == 1:
+                                self.parent.Insertlog('dangeroption false enter')
+                                print'dangeroption false enter'
                                 self.proxy.Danger(False)
                                 self.pause = False
-                                self.DagerOption = 0
+                                self.DangerOption = 0
                         sleep(0.1)
                         continue
                 elif self.interimResume == True and self.interimcheck == True:
@@ -217,68 +243,75 @@ class printThread(threading.Thread):
                     if self.reservationPause == 1:
                         self.pause = True
                     if self.stop == True:
+                        self.run_stop()
                         return 1
 
                 if self.openDoor1() == True:
-                    self.parent.Insertlog('enter7')
-                    print'enter7'
+                    self.parent.Insertlog('opendoor3 true')
+                    print'opendoor3 true'
                     self.proxy.Danger(True)
                     self.pause = True
-                    self.DagerOption = 1
+                    self.DangerOption = 1
 
                 if self.pause == False:
                     if self.startPoint == True:
+                        self.parent.Insertlog('board down')
+                        print 'board down'
                         self.printer.boardDown(self.printer.ZMotorAmount, self.thickness)
                         cv2.waitKey(self.motorMoveAmountTime)
 
                     if pixeldata >= 2000000:
-                        self.parent.Insertlog('enter8')
-                        print'enter8'
+                        self.parent.Insertlog('if pixeldata >= 2000000')
+                        print'if pixeldata >= 2000000'
                         if self.thickness == 0.1:
                             sleep(19.64)
                         elif self.thickness == 0.075:
                             sleep(29.64)
                         elif self.thickness == 0.05:
-                            self.parent.Insertlog('enter9')
-                            print'enter9'
+                            self.parent.Insertlog('if pixeldata >= 2000000 - 0.05')
+                            print'if pixeldata >= 2000000 - 0.05'
                             sleep(49.64)
                         elif self.thickness == 0.025:
                             sleep(119.64)
                     else:
-                        self.parent.Insertlog('enter10')
-                        print'enter10'
-                        if self.thickness == 0.1:
+                        self.parent.Insertlog('if pixeldata < 2000000')
+                        print 'if pixeldata < 2000000'
+                        if self.thickness == 0.1 or self.thickness == 0.075:
                             sleep(2.54)
-                        else:
-                            if self.thickness == 0.075:
-                                sleep(2.54)
-                            else:
-                                if self.thickness == 0.05:
-                                    sleep(4.54)
-                                elif self.thickness == 0.025:
-                                    sleep(4.54)
-                                if self.stop == True:
-                                    return 1
-                    self.printer.lightOn1(self.nowLayer, self.basicTime, self.beginningTime)
-                    # if self.stop == True:
-                    #     return 1
+                        elif self.thickness == 0.05 or self.thickness == 0.025:
+                            sleep(4.54)
 
-                    self.parent.Insertlog('enter11')
-                    print'enter11'
+                    if self.stop == True:
+                        self.run_stop()
+                        return 1
+
+                    self.parent.Insertlog('engine on')
+                    print 'engine on'
+                    self.printer.lightOn1(self.nowLayer, self.basicTime, self.beginningTime) # engine on
+
+                    self.parent.Insertlog('engine off')
+                    print 'engine off'
                     self.printer.display.showSliceOffImage()
                     self.proxy.EngineOffCall()
+
                     self.nowLayer += 1
                     self.proxy.Layers(self.nowLayer)
+
                     if self.nowLayer <= self.LightStep_Beginning:
                         self.beginningTime = self.beginningTime - Minus_beginningTime
+
+                    self.parent.Insertlog('board up')
+                    print 'board up'
                     self.printer.boardUp(self.printer.ZMotorAmount)
                     cv2.waitKey(self.motorMoveAmountTime)
+
                     if self.stop == True:
+                        self.run_stop()
                         return 1
 
                     self.startPoint = True
 
-                if self.nowLayer >= self.totalLayer:
+                if self.nowLayer > self.totalLayer:
                     self.parent.Insertlog('enter12')
                     print'enter12'
                     try:
@@ -297,14 +330,12 @@ class printThread(threading.Thread):
                             sleep(49.64)
                         elif self.thickness == 0.025:
                             sleep(119.64)
-                    elif self.thickness == 0.1:
-                        sleep(2.54)
-                    elif self.thickness == 0.075:
-                        sleep(2.54)
-                    elif self.thickness == 0.05:
-                        sleep(4.54)
-                    elif self.thickness == 0.025:
-                        sleep(4.54)
+                    else:
+                        if self.thickness == 0.1 or self.thickness == 0.075:
+                            sleep(2.54)
+                        elif self.thickness == 0.05 or self.thickness == 0.025:
+                            sleep(4.54)
+
                     self.printer.lightOn1(self.nowLayer, self.basicTime, self.beginningTime)
                     self.printer.display.showSliceOffImage()
                     self.proxy.EngineOffCall()
