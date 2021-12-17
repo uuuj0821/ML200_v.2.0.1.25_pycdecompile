@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dd55b3c-d8d1-47ed-a737-41f607f4b20e" name="Changes" comment="&#10;2021년 12월 15일 (2021.12.15 / 2.0.1.25)&#10;&#10;[python]&#10;- 코드 분석 중 (출력시퀀스 분석 중)&#10;- 필요없는 파라미터 (유막대기시간 : 21버전부터 안쓴다고는 되어있음, 근데 python에서는 파라미터 read하는 코드가 있어서 삭제함, 출력 시퀀스에서도 안씀, thickness별로 설정된 시간이 들어가있음)&#10;- 출력 시퀀스에서 엔진 on/off 코드가 조건문 else에 들어가있었음 그래서 출력 시 engine이 on/off 되지 않았던 것임, 조건문 밖에 있어야함 if, else는 유막대기시간 thickness별로 되어있는 코드 이거 끝나고 조건문 나와서 엔진 on/off 되어야했음&#10;- engine on과 off사이에 self.stop 확인하는 코드있어서 삭제함 (저 라인에 걸리면 엔진 켜진채로 출력 종료될듯) 이외에도 액추에이터 상단으로 올린다거나 하는게 없음&#10;- 출력 취소 시 engine off, 조형판 영점으로 이동하는 코드 추가하기 (출력 취소 시 동작 정지하는 코드가 하나도 없음 그래서 출력취소를해도 엑추에이터가 움직이고 엔진이 안꺼지고 함)">
+    <list default="true" id="9dd55b3c-d8d1-47ed-a737-41f607f4b20e" name="Changes" comment="2021년 12월 16일 (2021.12.16 / 2.0.1.25)&#10;&#10;[python]&#10;- 출력 시퀀스에서 board 관련 코드 수정 (fw 리턴값 확인필요함)&#10;- dageroption -&gt; dangeroption으로 오타수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cls_rpcprintML192.py" beforeDir="false" afterPath="$PROJECT_DIR$/cls_rpcprintML192.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printer/cls_ML192v22.py" beforeDir="false" afterPath="$PROJECT_DIR$/printer/cls_ML192v22.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xmlrpcserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/xmlrpcserver.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +30,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dp110server(무토전용python)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../dp110server_im2" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -54,7 +55,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639560792623</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2021년 12월 16일 (2021.12.16 / 2.0.1.25)&#10;&#10;[python]&#10;- 출력 시퀀스에서 board 관련 코드 수정 (fw 리턴값 확인필요함)&#10;- dageroption -&gt; dangeroption으로 오타수정">
+      <created>1639648499479</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639648499482</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -71,6 +79,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2021년 12월 14일 (2021.12.14 / 2.0.1.25)&#10;&#10;* 날짜만 오늘자로 추가&#10;* 코드 분석 중&#10;&#10;[qt]&#10;- 관리자 모드, information 날짜 추가&#10;&#10;[python]&#10;- 출력시퀀스 로그 코드 추가 (동작 확인 중)&#10;- 로그 추가한 후 git 등록함 (로그 추가, 날짜 수정만)" />
     <MESSAGE value="&#10;2021년 12월 15일 (2021.12.15 / 2.0.1.25)&#10;&#10;[python]&#10;- 코드 분석 중 (출력시퀀스 분석 중)&#10;- 필요없는 파라미터 (유막대기시간 : 21버전부터 안쓴다고는 되어있음, 근데 python에서는 파라미터 read하는 코드가 있어서 삭제함, 출력 시퀀스에서도 안씀, thickness별로 설정된 시간이 들어가있음)&#10;- 출력 시퀀스에서 엔진 on/off 코드가 조건문 else에 들어가있었음 그래서 출력 시 engine이 on/off 되지 않았던 것임, 조건문 밖에 있어야함 if, else는 유막대기시간 thickness별로 되어있는 코드 이거 끝나고 조건문 나와서 엔진 on/off 되어야했음&#10;- engine on과 off사이에 self.stop 확인하는 코드있어서 삭제함 (저 라인에 걸리면 엔진 켜진채로 출력 종료될듯) 이외에도 액추에이터 상단으로 올린다거나 하는게 없음&#10;- 출력 취소 시 engine off, 조형판 영점으로 이동하는 코드 추가하기 (출력 취소 시 동작 정지하는 코드가 하나도 없음 그래서 출력취소를해도 엑추에이터가 움직이고 엔진이 안꺼지고 함)" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;2021년 12월 15일 (2021.12.15 / 2.0.1.25)&#10;&#10;[python]&#10;- 코드 분석 중 (출력시퀀스 분석 중)&#10;- 필요없는 파라미터 (유막대기시간 : 21버전부터 안쓴다고는 되어있음, 근데 python에서는 파라미터 read하는 코드가 있어서 삭제함, 출력 시퀀스에서도 안씀, thickness별로 설정된 시간이 들어가있음)&#10;- 출력 시퀀스에서 엔진 on/off 코드가 조건문 else에 들어가있었음 그래서 출력 시 engine이 on/off 되지 않았던 것임, 조건문 밖에 있어야함 if, else는 유막대기시간 thickness별로 되어있는 코드 이거 끝나고 조건문 나와서 엔진 on/off 되어야했음&#10;- engine on과 off사이에 self.stop 확인하는 코드있어서 삭제함 (저 라인에 걸리면 엔진 켜진채로 출력 종료될듯) 이외에도 액추에이터 상단으로 올린다거나 하는게 없음&#10;- 출력 취소 시 engine off, 조형판 영점으로 이동하는 코드 추가하기 (출력 취소 시 동작 정지하는 코드가 하나도 없음 그래서 출력취소를해도 엑추에이터가 움직이고 엔진이 안꺼지고 함)" />
+    <MESSAGE value="2021년 12월 16일 (2021.12.16 / 2.0.1.25)&#10;&#10;[python]&#10;- 출력 시퀀스에서 board 관련 코드 수정 (fw 리턴값 확인필요함)&#10;- dageroption -&gt; dangeroption으로 오타수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="2021년 12월 16일 (2021.12.16 / 2.0.1.25)&#10;&#10;[python]&#10;- 출력 시퀀스에서 board 관련 코드 수정 (fw 리턴값 확인필요함)&#10;- dageroption -&gt; dangeroption으로 오타수정" />
   </component>
 </project>

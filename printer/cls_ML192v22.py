@@ -94,7 +94,10 @@ class cls_ML192v22(object):
         return True
 
     def removeImageFile(self):
-        os.system('sudo rm -r /home/dp110/carima/buffer/image')
+        try:
+            os.system('sudo rm -r /home/dp110/carima/buffer/image')
+        except:
+            return True
         return True
 
     def zMotorPositionRead(self):

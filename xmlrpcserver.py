@@ -89,4 +89,4 @@ if __name__ == '__main__':
     server.serve_forever()
     print 'Stop XML-RPC server on %s:%d' % (HOST, PORT)
 
-    # 2021.12.16 (2.0.1.25)
+    # 2021.12.17 (2.0.1.25)
