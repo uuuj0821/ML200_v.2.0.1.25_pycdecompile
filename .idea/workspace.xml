@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dd55b3c-d8d1-47ed-a737-41f607f4b20e" name="Changes" comment="2021년 12월 17일 (2021.12.17 / 2.0.1.25)&#10;&#10;[python]&#10;- 출력정지 시 코드 수정 (호출 잘못 한것있었음)&#10;- 출력 정지, 출력 종료 코드 구분 (qt에서 python으로 printstop신호도 주기때문에)&#10;- 출력 시퀀스 수정 : boardup, down 시 (thickness도 계속 증가해야하는데 그렇게 되어있지 않음, 어떻게 출력이 된건지는 모르겠음)&#10;- 불필요한 조건문 삭제&#10;- 조건문 이상한것들 수정 (특히 엑추에이터 제어 부분)&#10;- removeimagefile 함수에 try except문 추가">
+    <list default="true" id="9dd55b3c-d8d1-47ed-a737-41f607f4b20e" name="Changes" comment="2021년 12월 21일&#10;&#10;* 보드FW가 없으므로 python에서 웬만하면 수정하는걸로 진행&#10;* 21, 25버전 비교결과 동일하여 계속 수정해오던 25버전 코드로 계속 수정하겠으&#10;&#10;[python]&#10;- 보드 up/down에서 z위치 - totalthickness로 수정한 것 다시 원상복구함 (원래 그렇게 되어있었고, 보드fw에 따라 저렇게 써야할 수도 있으니 일단 장비 테스트 우선 해보고 이상하면 - totalthickness할 것 : 문제 없이 잘 쓰고있다고 하니까...)&#10;- 초기에 opendoor랑 boardhome 찾는다고 while문 돌리는거 그냥 뺌. (굳이 돌릴필요잇나 0점으로 잘 가는거같은데?) 그냥 while 없이 boardhome 으로 가는 코드만 추가 =&gt; 안됨, hoardhome으로 가지도 않고 첫 몇층은 올라가기만하고 그럼, 다시 while문 추가함 (boardhome 리턴값 비교하는거 추가)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cls_rpcprintML192.py" beforeDir="false" afterPath="$PROJECT_DIR$/cls_rpcprintML192.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/printer/cls_ML192v22.py" beforeDir="false" afterPath="$PROJECT_DIR$/printer/cls_ML192v22.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xmlrpcserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/xmlrpcserver.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639731692010</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2021년 12월 21일&#10;&#10;* 보드FW가 없으므로 python에서 웬만하면 수정하는걸로 진행&#10;* 21, 25버전 비교결과 동일하여 계속 수정해오던 25버전 코드로 계속 수정하겠으&#10;&#10;[python]&#10;- 보드 up/down에서 z위치 - totalthickness로 수정한 것 다시 원상복구함 (원래 그렇게 되어있었고, 보드fw에 따라 저렇게 써야할 수도 있으니 일단 장비 테스트 우선 해보고 이상하면 - totalthickness할 것 : 문제 없이 잘 쓰고있다고 하니까...)&#10;- 초기에 opendoor랑 boardhome 찾는다고 while문 돌리는거 그냥 뺌. (굳이 돌릴필요잇나 0점으로 잘 가는거같은데?) 그냥 while 없이 boardhome 으로 가는 코드만 추가 =&gt; 안됨, hoardhome으로 가지도 않고 첫 몇층은 올라가기만하고 그럼, 다시 while문 추가함 (boardhome 리턴값 비교하는거 추가)">
+      <created>1640081348691</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640081348691</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,6 +94,7 @@
     <MESSAGE value="&#10;2021년 12월 15일 (2021.12.15 / 2.0.1.25)&#10;&#10;[python]&#10;- 코드 분석 중 (출력시퀀스 분석 중)&#10;- 필요없는 파라미터 (유막대기시간 : 21버전부터 안쓴다고는 되어있음, 근데 python에서는 파라미터 read하는 코드가 있어서 삭제함, 출력 시퀀스에서도 안씀, thickness별로 설정된 시간이 들어가있음)&#10;- 출력 시퀀스에서 엔진 on/off 코드가 조건문 else에 들어가있었음 그래서 출력 시 engine이 on/off 되지 않았던 것임, 조건문 밖에 있어야함 if, else는 유막대기시간 thickness별로 되어있는 코드 이거 끝나고 조건문 나와서 엔진 on/off 되어야했음&#10;- engine on과 off사이에 self.stop 확인하는 코드있어서 삭제함 (저 라인에 걸리면 엔진 켜진채로 출력 종료될듯) 이외에도 액추에이터 상단으로 올린다거나 하는게 없음&#10;- 출력 취소 시 engine off, 조형판 영점으로 이동하는 코드 추가하기 (출력 취소 시 동작 정지하는 코드가 하나도 없음 그래서 출력취소를해도 엑추에이터가 움직이고 엔진이 안꺼지고 함)" />
     <MESSAGE value="2021년 12월 16일 (2021.12.16 / 2.0.1.25)&#10;&#10;[python]&#10;- 출력 시퀀스에서 board 관련 코드 수정 (fw 리턴값 확인필요함)&#10;- dageroption -&gt; dangeroption으로 오타수정" />
     <MESSAGE value="2021년 12월 17일 (2021.12.17 / 2.0.1.25)&#10;&#10;[python]&#10;- 출력정지 시 코드 수정 (호출 잘못 한것있었음)&#10;- 출력 정지, 출력 종료 코드 구분 (qt에서 python으로 printstop신호도 주기때문에)&#10;- 출력 시퀀스 수정 : boardup, down 시 (thickness도 계속 증가해야하는데 그렇게 되어있지 않음, 어떻게 출력이 된건지는 모르겠음)&#10;- 불필요한 조건문 삭제&#10;- 조건문 이상한것들 수정 (특히 엑추에이터 제어 부분)&#10;- removeimagefile 함수에 try except문 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="2021년 12월 17일 (2021.12.17 / 2.0.1.25)&#10;&#10;[python]&#10;- 출력정지 시 코드 수정 (호출 잘못 한것있었음)&#10;- 출력 정지, 출력 종료 코드 구분 (qt에서 python으로 printstop신호도 주기때문에)&#10;- 출력 시퀀스 수정 : boardup, down 시 (thickness도 계속 증가해야하는데 그렇게 되어있지 않음, 어떻게 출력이 된건지는 모르겠음)&#10;- 불필요한 조건문 삭제&#10;- 조건문 이상한것들 수정 (특히 엑추에이터 제어 부분)&#10;- removeimagefile 함수에 try except문 추가" />
+    <MESSAGE value="2021년 12월 21일&#10;&#10;* 보드FW가 없으므로 python에서 웬만하면 수정하는걸로 진행&#10;* 21, 25버전 비교결과 동일하여 계속 수정해오던 25버전 코드로 계속 수정하겠으&#10;&#10;[python]&#10;- 보드 up/down에서 z위치 - totalthickness로 수정한 것 다시 원상복구함 (원래 그렇게 되어있었고, 보드fw에 따라 저렇게 써야할 수도 있으니 일단 장비 테스트 우선 해보고 이상하면 - totalthickness할 것 : 문제 없이 잘 쓰고있다고 하니까...)&#10;- 초기에 opendoor랑 boardhome 찾는다고 while문 돌리는거 그냥 뺌. (굳이 돌릴필요잇나 0점으로 잘 가는거같은데?) 그냥 while 없이 boardhome 으로 가는 코드만 추가 =&gt; 안됨, hoardhome으로 가지도 않고 첫 몇층은 올라가기만하고 그럼, 다시 while문 추가함 (boardhome 리턴값 비교하는거 추가)" />
+    <option name="LAST_COMMIT_MESSAGE" value="2021년 12월 21일&#10;&#10;* 보드FW가 없으므로 python에서 웬만하면 수정하는걸로 진행&#10;* 21, 25버전 비교결과 동일하여 계속 수정해오던 25버전 코드로 계속 수정하겠으&#10;&#10;[python]&#10;- 보드 up/down에서 z위치 - totalthickness로 수정한 것 다시 원상복구함 (원래 그렇게 되어있었고, 보드fw에 따라 저렇게 써야할 수도 있으니 일단 장비 테스트 우선 해보고 이상하면 - totalthickness할 것 : 문제 없이 잘 쓰고있다고 하니까...)&#10;- 초기에 opendoor랑 boardhome 찾는다고 while문 돌리는거 그냥 뺌. (굳이 돌릴필요잇나 0점으로 잘 가는거같은데?) 그냥 while 없이 boardhome 으로 가는 코드만 추가 =&gt; 안됨, hoardhome으로 가지도 않고 첫 몇층은 올라가기만하고 그럼, 다시 while문 추가함 (boardhome 리턴값 비교하는거 추가)" />
   </component>
 </project>

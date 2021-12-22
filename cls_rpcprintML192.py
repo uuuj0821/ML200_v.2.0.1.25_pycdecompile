@@ -78,6 +78,8 @@ class printThread(threading.Thread):
         self.motorendUpmoveTime = int(self.printer.ZMotorEndUpDistance / 4 * 1000 + 100)
         self.motorMoveAmountTime = int(self.printer.ZMotorAmount / 4 * 1000 + 100)
         self.DoorSignal = False
+        self.boardPosition1 = ''
+        self.boardPosition2 = ''
         print 'setprint finish'
 
     def openDoor1(self):
@@ -133,6 +135,7 @@ class printThread(threading.Thread):
         cv2.waitKey(1)
         cv2.waitKey(1)
 
+
         while 1:
             self.printer.printConnect1()
             if self.openDoor1() == True:
@@ -150,15 +153,17 @@ class printThread(threading.Thread):
                 print 'opendoor1 false'
                 self.printer.printConnect2()
 
-                print self.printer.boardHome()
+                self.boardPosition1 = self.printer.boardHome()
+                sleep(0.3)
+                print self.boardPosition1
 
-                if self.printer.boardHome() != '4f0b0000000000000000500a':
-                    # if self.printer.boardHome() == '4f1300000000000000df500a' or self.printer.boardHome() == '4f1300000000000000ff500a':
+                if self.boardPosition1 != '4f0b0000000000000000500a':
                     print 'opendoor1 false = boradhome false - go boardhome'
-                    sleep(0.1)
-                    self.printer.boardHome()
-            if self.printer.boardHome() == '4f0b0000000000000000500a':
-                sleep(0.1)
+                    self.boardPosition2 = self.printer.boardHome()
+                    sleep(0.3)
+                    print self.boardPosition2
+            if self.boardPosition1 == '4f0b0000000000000000500a' or self.boardPosition2 == '4f0b0000000000000000500a':
+                sleep(0.3)
                 print'opendoor1 false = boardhome'
                 break
 
@@ -181,9 +186,9 @@ class printThread(threading.Thread):
 
         self.DangerOption = 0
 
-        sleep(0.1)
         print 'board up zeropoint'
         self.printer.boardUp(self.printer.ZeroPoint)
+        sleep(0.3)
 
         if self.stop == True:
             self.run_stop()
@@ -267,9 +272,8 @@ class printThread(threading.Thread):
 
                     self.parent.Insertlog('board down')
                     print 'board down'
-                    test = self.printer.boardDown(self.printer.ZMotorAmount, self.thickness)
-                    self.parent.Insertlog(test)
-                    print test
+                    self.printer.boardDown(self.printer.ZMotorAmount, self.thickness)
+                    sleep(0.3)
                     cv2.waitKey(self.motorMoveAmountTime)
 
                 if pixeldata >= 2000000:
@@ -311,12 +315,12 @@ class printThread(threading.Thread):
                 self.proxy.EngineOffCall()
 
                 self.nowLayer += 1
+                self.totalThickness += self.thickness
                 self.proxy.Layers(self.nowLayer)
 
                 if self.nowLayer <= self.LightStep_Beginning:
                     self.beginningTime = self.beginningTime - Minus_beginningTime
 
-                sleep(0.1)
                 self.parent.Insertlog('board up')
                 print 'board up'
                 self.printer.boardUp(self.printer.ZMotorAmount)
