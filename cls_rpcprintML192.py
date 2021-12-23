@@ -75,44 +75,34 @@ class printThread(threading.Thread):
         self.reTryPause = 0
         self.interimPausing = 0
         self.reservationPause = 0
-        self.motorendUpmoveTime = int(self.printer.ZMotorEndUpDistance / 4 * 1000 + 100)
-        self.motorMoveAmountTime = int(self.printer.ZMotorAmount / 4 * 1000 + 100)
+        self.motorendUpmoveTime = float((self.printer.ZMotorEndUpDistance / 4) + 0.1)
+        self.motorMoveAmountTime = float((self.printer.ZMotorAmount / 4) + 0.1)
         self.DoorSignal = False
         self.boardPosition1 = ''
         self.boardPosition2 = ''
         print 'setprint finish'
 
     def openDoor1(self):
-        print'opendoor1 enter'
-        self.printer.checkSensor()
-        print'opendoor1 enter111'
         self.printer.printConnect1()
-        print'opendoor1 enter333'
+        self.parent.Insertlog('checksensor1')
         returnData = self.printer.checkSensor()
+        self.parent.Insertlog('checksensor2')
         print returnData
         number = 0
         for hex1 in returnData:
-            print'opendoor1 - for enter'
             #print hex1
             Fnumber = number
             number = number + 1
             if hex1 == 'f':
                 if returnData[(Fnumber + 1)] == 'f':
-                    print 'opendoor1 - if f'
-                    self.printer.printConnect2()
                     self.DoorSignal = True
-                    print returnData
                     return True
                 if returnData[(Fnumber + 1)] == '1':
-                    print'opendoor1 - if 1'
-                    print returnData
                     pass
                 elif returnData[(Fnumber - 1)] == 'd':
-                    print 'opendoor1 if d'
-                    self.printer.printConnect2()
                     self.DoorSignal = False
-                    print returnData
                     return False
+        self.parent.Insertlog('checksensor3')
         return 'Fail'
 
     def xmlrpcclient(self):
@@ -130,17 +120,12 @@ class printThread(threading.Thread):
         return 1
 
     def run(self):
-        self.parent.Insertlog('run enter')
-        print 'run enter'
         cv2.waitKey(1)
         cv2.waitKey(1)
-
 
         while 1:
             self.printer.printConnect1()
             if self.openDoor1() == True:
-                print 'opendoor1 true'
-                self.parent.Insertlog('opendoor1 true')
                 self.proxy.Danger(True)
                 self.DangerOption = 1
                 if self.stop == True:
@@ -149,10 +134,8 @@ class printThread(threading.Thread):
                 self.printer.boardStop()
                 sleep(0.1)
             else:
-                self.parent.Insertlog('opendoor1 false')
                 print 'opendoor1 false'
-                self.printer.printConnect2()
-
+                # self.printer.printConnect2()
                 self.boardPosition1 = self.printer.boardHome()
                 sleep(0.3)
                 print self.boardPosition1
@@ -163,7 +146,6 @@ class printThread(threading.Thread):
                     sleep(0.3)
                     print self.boardPosition2
             if self.boardPosition1 == '4f0b0000000000000000500a' or self.boardPosition2 == '4f0b0000000000000000500a':
-                sleep(0.3)
                 print'opendoor1 false = boardhome'
                 break
 
@@ -171,10 +153,9 @@ class printThread(threading.Thread):
                 self.run_stop()
                 return 1
 
-            self.printer.checkSensor()
+            # self.printer.checkSensor()
 
             if self.DangerOption == 1 and self.openDoor1() == False:
-                self.parent.Insertlog('opendoor2 false')
                 print 'opendoor2 false'
                 self.proxy.Danger(False)
                 self.proxy.Danger(False)
@@ -187,8 +168,8 @@ class printThread(threading.Thread):
         self.DangerOption = 0
 
         print 'board up zeropoint'
-        self.printer.boardUp(self.printer.ZeroPoint)
-        sleep(0.3)
+        self.printer.boardUp(self.ZeroPoint)
+        sleep((self.ZeroPoint / 4) + 0.1)
 
         if self.stop == True:
             self.run_stop()
@@ -200,19 +181,15 @@ class printThread(threading.Thread):
             Minus_beginningTime = 0
 
         while self.nowLayer < self.totalLayer: # 조형 반복 시퀀스
-            self.parent.Insertlog('print repetition enter')
             print'print repetition enter'
-            self.parent.Insertlog(self.nowLayer)
             print self.nowLayer
 
             try:
-                self.parent.Insertlog('pixel data read')
                 print 'pixel data read'
                 pixeldata = int(self.Config.get('PixelData', 'SEC_%04d.png' % self.nowLayer))
             except:
                 pixeldata = 1
 
-            self.parent.Insertlog('pixel data read else')
             print 'pixel data read else'
 
             if self.pause == True:
@@ -223,9 +200,9 @@ class printThread(threading.Thread):
                 if self.interimPause == True and self.reTryPause == 0:
                     self.reTryPause = 1
                     self.DoorSignal = True
-                    self.printer.boardUp(self.printer.ZMotorEndUpDistance)
+                    self.printer.boardUp(self.ZMotorEndUpDistance)
                     self.interimPausing = 1
-                    cv2.waitKey(self.motorendUpmoveTime)
+                    sleep(self.motorendUpmoveTime)
                     self.interimcheck = True
                     self.interimPause = False
                     sleep(0.5)
@@ -237,7 +214,6 @@ class printThread(threading.Thread):
                         return 1
                     if self.openDoor1() == False and self.interOption == 0 and self.pauseOption == 0:
                         if self.DangerOption == 1:
-                            self.parent.Insertlog('dangeroption false enter')
                             print'dangeroption false enter'
                             self.proxy.Danger(False)
                             self.pause = False
@@ -247,9 +223,9 @@ class printThread(threading.Thread):
             elif self.interimResume == True and self.interimcheck == True:  # 일시정지 해제
                 self.interimResume = False
                 self.interimcheck = False
-                self.printer.boardDown(self.printer.ZMotorEndUpDistance, 0)
+                self.printer.boardDown(self.ZMotorEndUpDistance, 0)
                 self.interimPausing = 0
-                cv2.waitKey(self.motorendUpmoveTime)
+                sleep(self.motorendUpmoveTime)
                 self.reTryPause = 0
                 self.DoorSignal = False
             else:
@@ -259,38 +235,41 @@ class printThread(threading.Thread):
                     self.run_stop()
                     return 1
 
+            self.parent.Insertlog('before opendoor')
+
             if self.openDoor1() == True:
-                self.parent.Insertlog('opendoor3 true')
                 print'opendoor3 true'
                 self.proxy.Danger(True)
                 self.pause = True
                 self.DangerOption = 1
+                if self.stop == True:
+                    self.run_stop()
+                    return 1
+
+            self.parent.Insertlog('after opendoor')
 
             if self.pause == False:
                 if self.startPoint == True:
-                    self.parent.Insertlog('layer 2 ~ ')
-
-                    self.parent.Insertlog('board down')
                     print 'board down'
-                    self.printer.boardDown(self.printer.ZMotorAmount, self.thickness)
-                    sleep(0.3)
-                    cv2.waitKey(self.motorMoveAmountTime)
+                    self.parent.Insertlog('before board down')
+                    self.printer.boardDown(self.ZMotorAmount, self.thickness)
+                    self.parent.Insertlog('after board down')
+                    print'board down next'
+                    sleep(self.motorMoveAmountTime)
+                    print'board down next2'
 
                 if pixeldata >= 2000000:
-                    self.parent.Insertlog('if pixeldata >= 2000000')
                     print'if pixeldata >= 2000000'
                     if self.thickness == 0.1:
                         sleep(19.64)
                     elif self.thickness == 0.075:
                         sleep(29.64)
                     elif self.thickness == 0.05:
-                        self.parent.Insertlog('if pixeldata >= 2000000 - 0.05')
                         print'if pixeldata >= 2000000 - 0.05'
                         sleep(49.64)
                     elif self.thickness == 0.025:
                         sleep(119.64)
                 else:
-                    self.parent.Insertlog('if pixeldata < 2000000')
                     print 'if pixeldata < 2000000'
                     if self.thickness == 0.1:
                         sleep(2.54)
@@ -305,11 +284,9 @@ class printThread(threading.Thread):
                     self.run_stop()
                     return 1
 
-                self.parent.Insertlog('engine on')
                 print 'engine on'
                 self.printer.lightOn1(self.nowLayer, self.basicTime, self.beginningTime) # engine on
 
-                self.parent.Insertlog('engine off')
                 print 'engine off'
                 self.printer.display.showSliceOffImage()
                 self.proxy.EngineOffCall()
@@ -321,10 +298,9 @@ class printThread(threading.Thread):
                 if self.nowLayer <= self.LightStep_Beginning:
                     self.beginningTime = self.beginningTime - Minus_beginningTime
 
-                self.parent.Insertlog('board up')
                 print 'board up'
-                self.printer.boardUp(self.printer.ZMotorAmount)
-                cv2.waitKey(self.motorMoveAmountTime)
+                self.printer.boardUp(self.ZMotorAmount)
+                sleep(self.motorMoveAmountTime)
 
                 if self.stop == True:
                     self.run_stop()
@@ -333,15 +309,14 @@ class printThread(threading.Thread):
                 self.startPoint = True
 
             if self.nowLayer >= self.totalLayer:
-                self.parent.Insertlog('enter12')
-                print'enter12'
                 try:
                     pixeldata = int(self.Config.get('PixelData', 'SEC_%04d.png' % self.nowLayer))
                 except:
                     pixeldata = 1
 
-                self.printer.boardDown(self.printer.ZMotorAmount, self.thickness)
-                cv2.waitKey(self.motorMoveAmountTime)
+                self.printer.boardDown(self.ZMotorAmount, self.thickness)
+                sleep(self.motorMoveAmountTime)
+
                 if pixeldata >= 2000000:
                     if self.thickness == 0.1:
                         sleep(19.64)
@@ -363,13 +338,13 @@ class printThread(threading.Thread):
                 self.printer.ledOn_fanOff()
                 self.printer.printConnect2()
                 sleep(0.1)
-                self.printer.boardUp(int(self.printer.ZMotorEndUpDistance))
+                self.printer.boardUp(int(self.ZMotorEndUpDistance))
+                sleep(self.motorendUpmoveTime)
                 self.proxy.Printing()
                 self.parent.Insertlog('printing complete')
                 print'printing complete'
                 self.printer.removeImageFile()
                 return 1
-        print'while finish'
 
 class cls_RpcPrintML192(object):
     """

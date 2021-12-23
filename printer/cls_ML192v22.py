@@ -31,8 +31,8 @@ class cls_ML192v22(object):
         self.LightTime_Basic = float(config.get('PARAMETER', 'LightTime_Basic'))
         self.LightTime_Beginning = float(config.get('PARAMETER', 'LightTime_Beginning'))
         self.DivisionTime = float(config.get('PARAMETER', 'DivisionTime'))
-        self.ZMotorEndUpDistance = int(config.get('MOTOR_SETUP', 'ZMotorEndUpDistance'))
-        self.ZMotorAmount = int(config.get('MOTOR_SETUP', 'ZMotorAmount'))
+        self.ZMotorEndUpDistance = float(config.get('MOTOR_SETUP', 'ZMotorEndUpDistance'))
+        self.ZMotorAmount = float(config.get('MOTOR_SETUP', 'ZMotorAmount'))
         self.ZeroPoint = float(config.get('MOTOR_SETUP', 'ZeroPoint'))
         # self.WaitTime_Basic = float(config.get('PARAMETER', 'BasicWaitTime'))
         # self.WaitTime_Beginning = float(config.get('PARAMETER', 'InitWaitTime'))
@@ -84,13 +84,17 @@ class cls_ML192v22(object):
         return 1
 
     def printConnect1(self):
-        self.board.ser.timeout = 200
-        self.board.ser.writeTimeout = 200
+        # self.board.ser.timeout = 200
+        # self.board.ser.writeTimeout = 200
+        self.board.ser.timeout = None
+        self.board.ser.writeTimeout = None
         return True
 
     def printConnect2(self):
-        self.board.ser.timeout = 0.1
-        self.board.ser.writeTimeout = 0.1
+        # self.board.ser.timeout = 0.1
+        # self.board.ser.writeTimeout = 0.1
+        self.board.ser.timeout = 0.5
+        self.board.ser.writeTimeout = 0.5
         return True
 
     def removeImageFile(self):
