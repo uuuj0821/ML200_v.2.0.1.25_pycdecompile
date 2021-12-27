@@ -83,11 +83,9 @@ class printThread(threading.Thread):
         print 'setprint finish'
 
     def openDoor1(self):
+        self.printer.checkSensor()
         self.printer.printConnect1()
-        self.parent.Insertlog('checksensor1')
         returnData = self.printer.checkSensor()
-        self.parent.Insertlog('checksensor2')
-        print returnData
         number = 0
         for hex1 in returnData:
             #print hex1
@@ -102,7 +100,6 @@ class printThread(threading.Thread):
                 elif returnData[(Fnumber - 1)] == 'd':
                     self.DoorSignal = False
                     return False
-        self.parent.Insertlog('checksensor3')
         return 'Fail'
 
     def xmlrpcclient(self):
@@ -153,7 +150,7 @@ class printThread(threading.Thread):
                 self.run_stop()
                 return 1
 
-            # self.printer.checkSensor()
+            self.printer.checkSensor()
 
             if self.DangerOption == 1 and self.openDoor1() == False:
                 print 'opendoor2 false'
@@ -252,7 +249,8 @@ class printThread(threading.Thread):
                 if self.startPoint == True:
                     print 'board down'
                     self.parent.Insertlog('before board down')
-                    self.printer.boardDown(self.ZMotorAmount, self.thickness)
+                    test = self.printer.boardDown(self.ZMotorAmount, self.thickness)
+                    print test
                     self.parent.Insertlog('after board down')
                     print'board down next'
                     sleep(self.motorMoveAmountTime)
